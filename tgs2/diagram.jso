@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "author": "Ilham Nafi'",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": -42,
+      "left": 147.8,
+      "attrs": { "color": "red", "label": "led_m" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_yellow",
+      "top": -42,
+      "left": 215,
+      "attrs": { "color": "yellow", "label": "led_k" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": -51.6,
+      "left": 282.2,
+      "attrs": { "color": "green", "label": "led_h" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 7.4,
+      "left": -76.8,
+      "attrs": { "label": "5x" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 84.2,
+      "left": -67.2,
+      "attrs": { "label": "m_h" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn3",
+      "top": 170.6,
+      "left": -57.6,
+      "attrs": { "label": "m_k_h" }
+    }
+  ],
+  "connections": [
+    [ "led_red:A", "esp:4", "red", [ "v0" ] ],
+    [ "led_red:C", "esp:GND.3", "black", [ "v0" ] ],
+    [ "led_yellow:A", "esp:5", "yellow", [ "v0" ] ],
+    [ "led_yellow:C", "esp:GND.3", "black", [ "v0" ] ],
+    [ "led_green:A", "esp:18", "green", [ "v0" ] ],
+    [ "led_green:C", "esp:GND.3", "black", [ "v0" ] ],
+    [ "btn1:1.r", "esp:13", "green", [ "h20", "v144" ] ],
+    [ "btn1:2.r", "esp:GND.1", "green", [ "h20", "v115.6" ] ],
+    [ "btn2:1.r", "esp:14", "green", [ "v0" ] ],
+    [ "btn2:2.r", "esp:GND.1", "green", [ "h0" ] ],
+    [ "btn3:1.r", "esp:15", "green", [ "v0" ] ],
+    [ "btn3:2.r", "esp:GND.1", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
